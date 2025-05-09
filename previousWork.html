@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landscaping Services</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('dirtBackground.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      color: white;
+    }
+
+    /* Header Styling */
+    header {
+      position: sticky;
+      top: 0;
+      background-color: rgba(34, 139, 34, 0.95); /* forest green with slight transparency */
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      z-index: 1000;
+      transition: background-color 0.3s;
+      flex-wrap: wrap;
+    }
+
+    /* Logo Styling */
+    .logo {
+      height: 60px;
+    }
+
+    /* Navigation Links Styling */
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    /* Navigation Links for Mobile */
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    /* Right Section Styling (Cart and Search buttons) */
+    .header-right {
+      display: flex;
+      gap: 10px;
+    }
+
+    button {
+      background-color: white;
+      color: #2e7d32;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #e0e0e0;
+    }
+
+    /* Hamburger Menu Styling */
+    .hamburger {
+      display: none;
+      font-size: 30px;
+      cursor: pointer;
+      color: white;
+    }
+
+    /* Mobile View: Hide navigation and show hamburger menu */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #2e7d32;
+        padding: 10px 0;
+      }
+
+      /* Hamburger menu is shown on mobile */
+      .hamburger {
+        display: block;
+      }
+
+      /* Show navigation links when hamburger is clicked */
+      .nav-links.show {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: rgba(34, 139, 34, 0.95);
+        border-radius: 5px;
+        padding: 10px 0;
+      }
+
+      .nav-links a {
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+      }
+
+      .nav-links a:first-child {
+        border-top: none;
+      }
+    }
+
+    h1 {
+      text-align: center;
+      padding: 20px;
+      padding-top: 120px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      padding: 20px;
+    }
+
+    .before-after {
+      display: flex;
+      flex-direction: row;
+      gap: 0;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .before-after img {
+      width: 90%;
+      max-width: 400px;
+      height: auto;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .section p {
+      font-weight: bold;
+      margin: 10px 0 0;
+    }
+
+    /* Mobile Styles */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        background-color: #2e7d32;
+        padding: 10px 0;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .nav-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header id="main-header">
+    <!-- Logo Section -->
+    <div class="header-left">
+      <img src="lands-logo.jpg" alt="Logo" class="logo">
+    </div>
+
+    <!-- Hamburger Menu Icon (for mobile) -->
+    <div class="hamburger" onclick="toggleNav()">☰</div>
+
+    <!-- Navigation Links -->
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="book appointment.html">Book Appointment</a>
+      <a href="previousWork.html">Previous Work</a>
+      <a href="Booking Calendar.html?readonly=true">Calendar</a>
+      <a href="Make An Account.html" id="makeAccountLink">Make An Account</a>
+      <a href="Log In.html" id="loginLink">Log In</a>
+      <span id="userGreeting" style="color: white; padding-left: 30px;"></span>
+      <button id="logoutButton" style="display:none; background-color: #d9534f; color: white; border: none; padding: 5px 10px; border-radius: 5px;">Log Out</button>
+    </nav>
+
+    <!-- Header Right Section (Cart and Search buttons) -->
+    <div class="header-right">
+      <button>Cart</button>
+      <button>Search</button>
+    </div>
+  </header>
+
+  <h1>Before & After Projects</h1>
+
+  <div class="gallery">
+    <!-- Section 1 -->
+    <div class="section">
+      <div class="before-after">
+        <img src="sideHouseBefore.jpeg" alt="Before 1" />
+        <img src="sideHouseAfter.jpeg" alt="After 1" />
+      </div>
+      <p>Project 1</p>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section">
+      <div class="before-after">
+        <img src="treesBefore.png" alt="Before 2" />
+        <img src="treesAfter.png" alt="After 2" />
+      </div>
+      <p>Project 2</p>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section">
+      <div class="before-after">
+        <img src="housePorchBefore.png" alt="Before 3" />
+        <img src="housePorchAfter.png" alt="After 3" />
+      </div>
+      <p>Project 3</p>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="section">
+      <div class="before-after">
+        <img src="patioBefore.jpeg" alt="Before 4" />
+        <img src="patioAfter.png" alt="After 4" />
+      </div>
+      <p>Project 4</p>
+    </div>
+
+    <div class="section">
+      <div class="before-after">
+        <img src="rockWallBefore.png" alt="Before 4" />
+        <img src="rockWallAfter.png" alt="After 4" />
+      </div>
+      <p>Project 5</p>
+    </div>
+  </div>
+
+  <script>
+    // Toggle navigation menu for mobile
+    function toggleNav() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('show');
+    }
+
+    // Check if the user is logged in and update the header
+    window.onload = function () {
+      const loggedInUser = localStorage.getItem('loggedInUser');
+      const makeAccountLink = document.getElementById('makeAccountLink');
+      const loginLink = document.getElementById('loginLink');
+      const userGreeting = document.getElementById('userGreeting');
+      const logoutButton = document.getElementById('logoutButton');
+
+      if (loggedInUser) {
+        const users = JSON.parse(localStorage.getItem('users') || '{}');
+        const user = users[loggedInUser];
+
+        // Hide "Make an Account" and "Log In" links
+        makeAccountLink.style.display = 'none';
+        loginLink.style.display = 'none';
+
+        // Display the user's name in the header
+        const userName = `${user.firstName} ${user.lastName}`;
+        userGreeting.textContent = `Welcome, ${userName}`;
+        logoutButton.style.display = 'inline-block';
+
+        logoutButton.onclick = function () {
+          localStorage.removeItem('loggedInUser');
+          location.reload();
+        };
+      }
+    };
+  </script>
+
+</body>
+
+</html>
