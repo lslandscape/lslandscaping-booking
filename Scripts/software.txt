@@ -1,0 +1,49 @@
+Sharesync - 
+	syncs data
+	in place of drop box
+	used locally
+	stores and organizes documents
+	manage permissions
+	Microsoft 365
+	used in the field
+	older guys like it better
+	automatic backup of:
+		desktop
+		docs
+		downloads
+	no vpn needed
+
+Sharepoint - 
+	syncs dataused for outside sources
+	used for bidding folders
+	cloud hosted
+
+Sonic wall - 
+	Cashmans firewall
+	new system upstairs
+	vpn
+
+Intermedia - 
+	Phone system
+	users of phones
+	Sterling and Cashman on different systems
+	can tap into phone remotly
+
+KnowBe4 - 
+	phishing test
+	tells if people open email, click on link, enter info
+	make people re-train
+
+Viewpoint - 
+	accounting software
+
+Power Automate
+invoice.kitchen
+	
+
+
+planner isn't an app
+richardson laptop does not hold charge
+
+
+api key - AIzaSyBfbuJHVK25Vk5dAfJJ2fo4J_U9pu3k4Oc
